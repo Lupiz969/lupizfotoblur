@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>🌸 Cute AI Camera</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Blur.css">
+
+    <!-- MediaPipe -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <span class="bubble bubble1"></span>
+    <span class="bubble bubble2"></span>
+    <span class="bubble bubble3"></span>
+    <span class="bubble bubble4"></span>
+
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>📸 Cute AI Camera</h1>
+
+        <p class="subtitle">
+            Tunjukkan pose favoritmu ✨
+        </p>
+
+        <div class="camera-box">
+
+            <video id="video" autoplay playsinline></video>
+
+            <canvas id="canvas"></canvas>
+
+            <div id="message">
+
+                😊 Kamera Belum Aktif
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="startBtn">
+
+                🌸 Nyalakan Kamera
+
+            </button>
+
+            <button id="stopBtn">
+
+                💖 Matikan Kamera
+
+            </button>
+
+        </div>
+
+        <div class="gesture">
+
+            Gesture :
+            <span id="gestureText">
+
+                Belum Terdeteksi
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Suara berhasil -->
+<audio id="successSound">
+    <source src="success.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Script -->
+<script src="blur.js"></script>
+<script src="gesture.js"></script>
+
+</body>
+
+</html>
